@@ -336,7 +336,7 @@
         if (!ok && a >= 0) { if (i - a > bestL) { bestL = i - a; bestA = a; } a = -1; }
       }
       if (bestA < 0) continue;
-      const tw = b.short.length * (W < 560 ? 6.4 : 7.4) + 14;
+      const tw = b.short.length * (G.W < 560 ? 6.4 : 7.4) + 14;
       if (bestL * dx < tw) continue;
       const half = Math.max(1, Math.round(tw / dx / 2));
       const lowC = Math.max(bestA + half, D.i0 + half), highC = Math.min(bestA + bestL - 1 - half, N - 1 - half);
@@ -501,7 +501,6 @@
     const tNow = sectorShare('BusEq') && sectorShare('BusEq')[last], eNow = sectorShare('Enrgy') && sectorShare('Enrgy')[last];
     const items = [[money(D.top[last]), dlabel(last) + ' · index'], [money(D.top[D.i0]), yearOf(D.i0) + ' · index']];
     if (tNow != null) items.push([pct(tNow, 1), dlabel(last) + ' · technology share']);
-    if (tech) items.push([pct(tech.v, 1), dlabel(tech.i) + ' · technology peak']);
     if (en) items.push([pct(en.v, 1), dlabel(en.i) + ' · energy peak']);
     for (const [v, l] of items) { const d = h('div', null, st); h('b', null, d, v); h('span', null, d, l); }
     return { tech, en, tNow, eNow };
