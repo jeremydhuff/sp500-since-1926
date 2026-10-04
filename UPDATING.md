@@ -98,17 +98,18 @@ python pipeline/tests/check_wrds_fixture.py   # the WRDS build logic on syntheti
 
 ## Publishing
 
-The repository is public and holds code only.
+Two things are published from the same repository:
 
-```powershell
-git add -A
-git commit -m "Describe the change"
-git push
-```
+- **Code** (branch `main`): `git add -A`, `git commit -m "Describe the change"`, `git push`. `git status` should never list `site/market.js` or anything under `data/`. If it does, stop and check `.gitignore`.
+- **The live site** (branch `gh-pages`, served by GitHub Pages at <https://jeremydhuff.github.io/sp500-since-1926/>): after rebuilding the data or changing the page, run
 
-`git status` should never list `site/market.js` or anything under `data/`. If it does, stop and check `.gitignore`.
+  ```powershell
+  python pipeline/publish_site.py
+  ```
 
-To publish the live chart you need to host `market.js` somewhere your WRDS agreement allows; that is a separate decision from pushing the code.
+  It copies `index.html`, `app.js` and `market.js` into a single fresh commit on `gh-pages` and force-pushes it. The site updates in a minute or two. Each publish gives the scripts a new `?v=` stamp, so visitors never see a stale copy.
+
+`market.js` contains CRSP-derived values from WRDS, so the live site publishes them. That is only appropriate if your institution's WRDS Subscription Agreement allows it. To take the data down, run `gh api -X DELETE repos/jeremydhuff/sp500-since-1926/pages` (the site goes offline) and `git push origin --delete gh-pages` (removes the published copy of `market.js`).
 
 ## When something breaks
 

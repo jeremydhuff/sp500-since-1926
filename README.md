@@ -2,7 +2,7 @@
 
 The largest US companies by market value, month by month from 1926. Each band is a company's (or sector's) share of the index; the top edge is the index total, on a log scale by default. In the By company view the ten largest companies in each month sit on the baseline, drawn at 150% of their share on the log and linear views, with everyone else as the grey band above them.
 
-Open `site/index.html` once `site/market.js` has been built (see below). Everything the page shows is in that one file.
+Live at <https://jeremydhuff.github.io/sp500-since-1926/>. To run it locally, build `site/market.js` first (see below) and open `site/index.html`. Everything the page shows is in that one file.
 
 **To refresh the data, change the page or publish, read [UPDATING.md](UPDATING.md).**
 
@@ -17,7 +17,7 @@ Open `site/index.html` once `site/market.js` has been built (see below). Everyth
 
 ## Licensing
 
-The company and index values come from CRSP through a WRDS subscription, which is licensed for academic, non-commercial use. This repository therefore holds **code only**: `site/market.js`, `data/derived/` and the WRDS pull are never committed. See "Licensing" in [UPDATING.md](UPDATING.md) before publishing anything built from them.
+The company and index values come from CRSP through a WRDS subscription, which is licensed for academic, non-commercial use. The `main` branch holds **code only**: `site/market.js`, `data/derived/` and the WRDS pull are never committed there. The live site on the `gh-pages` branch does include `market.js`; see "Publishing" in [UPDATING.md](UPDATING.md). See "Licensing" in [UPDATING.md](UPDATING.md) before publishing anything built from them.
 
 ## Quick start
 
