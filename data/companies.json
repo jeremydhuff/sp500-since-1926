@@ -1,0 +1,2081 @@
+[
+ {
+  "id": "apple",
+  "name": "Apple",
+  "short": "APPLE",
+  "sector": "BusEq",
+  "color": "#A9AFB7",
+  "yahoo": "AAPL",
+  "match": "^APPLE COMPUTER|^APPLE INC"
+ },
+ {
+  "id": "microsoft",
+  "name": "Microsoft",
+  "short": "MICROSOFT",
+  "sector": "BusEq",
+  "color": "#2F7FA3",
+  "yahoo": "MSFT",
+  "match": "^MICROSOFT"
+ },
+ {
+  "id": "nvidia",
+  "name": "Nvidia",
+  "short": "NVIDIA",
+  "sector": "BusEq",
+  "color": "#6C9A3A",
+  "yahoo": "NVDA",
+  "match": "^NVIDIA"
+ },
+ {
+  "id": "alphabet",
+  "name": "Alphabet",
+  "short": "ALPHABET",
+  "sector": "BusEq",
+  "color": "#D9A93F",
+  "yahoo": "GOOGL",
+  "match": "^GOOGLE|^ALPHABET"
+ },
+ {
+  "id": "amazon",
+  "name": "Amazon",
+  "short": "AMAZON",
+  "sector": "Shops",
+  "color": "#DE8C2C",
+  "yahoo": "AMZN",
+  "match": "^AMAZON"
+ },
+ {
+  "id": "meta",
+  "name": "Meta Platforms",
+  "short": "META",
+  "sector": "BusEq",
+  "color": "#4263B8",
+  "yahoo": "META",
+  "match": "^FACEBOOK|^META PLATFORMS"
+ },
+ {
+  "id": "tesla",
+  "name": "Tesla",
+  "short": "TESLA",
+  "sector": "Durbl",
+  "color": "#E0705F",
+  "yahoo": "TSLA",
+  "match": "^TESLA"
+ },
+ {
+  "id": "broadcom",
+  "name": "Broadcom",
+  "short": "BROADCOM",
+  "sector": "BusEq",
+  "color": "#B83A4A",
+  "yahoo": "AVGO",
+  "match": "^BROADCOM|^AVAGO"
+ },
+ {
+  "id": "oracle",
+  "name": "Oracle",
+  "short": "ORACLE",
+  "sector": "BusEq",
+  "color": "#C5483A",
+  "yahoo": "ORCL",
+  "match": "^ORACLE"
+ },
+ {
+  "id": "cisco",
+  "name": "Cisco",
+  "short": "CISCO",
+  "sector": "BusEq",
+  "color": "#2E7DA6",
+  "yahoo": "CSCO",
+  "match": "^CISCO"
+ },
+ {
+  "id": "intel",
+  "name": "Intel",
+  "short": "INTEL",
+  "sector": "BusEq",
+  "color": "#3E6FA3",
+  "yahoo": "INTC",
+  "match": "^INTEL CORP"
+ },
+ {
+  "id": "ibm",
+  "name": "IBM",
+  "short": "IBM",
+  "sector": "BusEq",
+  "color": "#2B4C8C",
+  "yahoo": "IBM",
+  "match": "^INTERNATIONAL BUSINESS MACH|^IBM"
+ },
+ {
+  "id": "qualcomm",
+  "name": "Qualcomm",
+  "short": "QUALCOMM",
+  "sector": "BusEq",
+  "color": "#35607F",
+  "yahoo": "QCOM",
+  "match": "^QUALCOMM"
+ },
+ {
+  "id": "texas-instruments",
+  "name": "Texas Instruments",
+  "short": "TEXAS INSTR.",
+  "sector": "BusEq",
+  "color": "#8DB3CE",
+  "yahoo": "TXN",
+  "match": "^TEXAS INSTRUMENTS"
+ },
+ {
+  "id": "amd",
+  "name": "AMD",
+  "short": "AMD",
+  "sector": "BusEq",
+  "color": "#294D67",
+  "yahoo": "AMD",
+  "match": "^ADVANCED MICRO DEVICES"
+ },
+ {
+  "id": "adobe",
+  "name": "Adobe",
+  "short": "ADOBE",
+  "sector": "BusEq",
+  "color": "#4F8BB6",
+  "yahoo": "ADBE",
+  "match": "^ADOBE"
+ },
+ {
+  "id": "salesforce",
+  "name": "Salesforce",
+  "short": "SALESFORCE",
+  "sector": "BusEq",
+  "color": "#3D6B8C",
+  "yahoo": "CRM",
+  "match": "^SALESFORCE"
+ },
+ {
+  "id": "netflix",
+  "name": "Netflix",
+  "short": "NETFLIX",
+  "sector": "Other",
+  "color": "#9E2A2F",
+  "yahoo": "NFLX",
+  "match": "^NETFLIX"
+ },
+ {
+  "id": "hp",
+  "name": "Hewlett-Packard / HP",
+  "short": "HP",
+  "sector": "BusEq",
+  "color": "#3C74B0",
+  "yahoo": "HPQ",
+  "match": "^HEWLETT PACKARD|^HP INC"
+ },
+ {
+  "id": "micron",
+  "name": "Micron",
+  "short": "MICRON",
+  "sector": "BusEq",
+  "color": "#447BA3",
+  "yahoo": "MU",
+  "match": "^MICRON TECH"
+ },
+ {
+  "id": "applied-materials",
+  "name": "Applied Materials",
+  "short": "APPLIED MAT.",
+  "sector": "BusEq",
+  "color": "#6B9BBF",
+  "yahoo": "AMAT",
+  "match": "^APPLIED MATERIALS"
+ },
+ {
+  "id": "palantir",
+  "name": "Palantir",
+  "short": "PALANTIR",
+  "sector": "BusEq",
+  "color": "#336081",
+  "yahoo": "PLTR",
+  "match": "^PALANTIR"
+ },
+ {
+  "id": "dell",
+  "name": "Dell",
+  "short": "DELL",
+  "sector": "BusEq",
+  "color": "#8CB3CF",
+  "yahoo": null,
+  "match": "^DELL COMPUTER|^DELL INC"
+ },
+ {
+  "id": "compaq",
+  "name": "Compaq",
+  "short": "COMPAQ",
+  "sector": "BusEq",
+  "color": "#2C4D65",
+  "yahoo": null,
+  "match": "^COMPAQ"
+ },
+ {
+  "id": "dec",
+  "name": "Digital Equipment",
+  "short": "DIGITAL EQ.",
+  "sector": "BusEq",
+  "color": "#4D8BB8",
+  "yahoo": null,
+  "match": "^DIGITAL EQUIPMENT"
+ },
+ {
+  "id": "motorola",
+  "name": "Motorola",
+  "short": "MOTOROLA",
+  "sector": "BusEq",
+  "color": "#3B6B8E",
+  "yahoo": null,
+  "match": "^MOTOROLA"
+ },
+ {
+  "id": "lucent",
+  "name": "Lucent",
+  "short": "LUCENT",
+  "sector": "BusEq",
+  "color": "#7CA7C6",
+  "yahoo": null,
+  "match": "^LUCENT"
+ },
+ {
+  "id": "sun",
+  "name": "Sun Microsystems",
+  "short": "SUN MICRO.",
+  "sector": "BusEq",
+  "color": "#427CA5",
+  "yahoo": null,
+  "match": "^SUN MICROSYSTEMS"
+ },
+ {
+  "id": "xerox",
+  "name": "Xerox",
+  "short": "XEROX",
+  "sector": "BusEq",
+  "color": "#699CC1",
+  "yahoo": null,
+  "match": "^XEROX"
+ },
+ {
+  "id": "polaroid",
+  "name": "Polaroid",
+  "short": "POLAROID",
+  "sector": "BusEq",
+  "color": "#36607E",
+  "yahoo": null,
+  "match": "^POLAROID"
+ },
+ {
+  "id": "kodak",
+  "name": "Eastman Kodak",
+  "short": "KODAK",
+  "sector": "Other",
+  "color": "#D3B13C",
+  "yahoo": null,
+  "match": "^EASTMAN KODAK"
+ },
+ {
+  "id": "burroughs",
+  "name": "Burroughs / Unisys",
+  "short": "BURROUGHS",
+  "sector": "BusEq",
+  "color": "#8AB3D1",
+  "yahoo": null,
+  "match": "^BURROUGHS|^UNISYS"
+ },
+ {
+  "id": "honeywell-old",
+  "name": "Honeywell (old)",
+  "short": "HONEYWELL",
+  "sector": "BusEq",
+  "color": "#2A4D66",
+  "yahoo": null,
+  "match": "^HONEYWELL INC"
+ },
+ {
+  "id": "att",
+  "name": "AT&T Inc. (SBC)",
+  "short": "AT&T INC.",
+  "sector": "Telcm",
+  "color": "#2F95C6",
+  "yahoo": "T",
+  "match": "SOUTHWESTERN BELL|^SBC COMM|AT&T INC"
+ },
+ {
+  "id": "att-corp",
+  "name": "AT&T Corp. (Ma Bell)",
+  "short": "AT&T (MA BELL)",
+  "sector": "Telcm",
+  "color": "#4E8FC4",
+  "yahoo": null,
+  "match": "AMERICAN TELEPHONE|^A T & T|^AT&T CORP|^AT&T"
+ },
+ {
+  "id": "verizon",
+  "name": "Verizon / Bell Atlantic",
+  "short": "VERIZON",
+  "sector": "Telcm",
+  "color": "#C0463C",
+  "yahoo": "VZ",
+  "match": "BELL ATLANTIC|^VERIZON"
+ },
+ {
+  "id": "gte",
+  "name": "GTE",
+  "short": "GTE",
+  "sector": "Telcm",
+  "color": "#AF9BBF",
+  "yahoo": null,
+  "match": "^G T E|^GTE|^GENERAL TEL"
+ },
+ {
+  "id": "bellsouth",
+  "name": "BellSouth",
+  "short": "BELLSOUTH",
+  "sector": "Telcm",
+  "color": "#4E3C5D",
+  "yahoo": null,
+  "match": "^BELLSOUTH"
+ },
+ {
+  "id": "ameritech",
+  "name": "Ameritech",
+  "short": "AMERITECH",
+  "sector": "Telcm",
+  "color": "#896FA0",
+  "yahoo": null,
+  "match": "^AMERITECH"
+ },
+ {
+  "id": "nynex",
+  "name": "NYNEX",
+  "short": "NYNEX",
+  "sector": "Telcm",
+  "color": "#6A5180",
+  "yahoo": null,
+  "match": "^NYNEX"
+ },
+ {
+  "id": "us-west",
+  "name": "US West",
+  "short": "US WEST",
+  "sector": "Telcm",
+  "color": "#A793B9",
+  "yahoo": null,
+  "match": "^US WEST|^U S WEST"
+ },
+ {
+  "id": "pacific-telesis",
+  "name": "Pacific Telesis",
+  "short": "PAC. TELESIS",
+  "sector": "Telcm",
+  "color": "#7A6090",
+  "yahoo": null,
+  "match": "^PACIFIC TELESIS"
+ },
+ {
+  "id": "mci-worldcom",
+  "name": "MCI / WorldCom",
+  "short": "WORLDCOM",
+  "sector": "Telcm",
+  "color": "#9B83B0",
+  "yahoo": null,
+  "match": "^WORLDCOM|^MCI"
+ },
+ {
+  "id": "comcast",
+  "name": "Comcast",
+  "short": "COMCAST",
+  "sector": "Telcm",
+  "color": "#604A73",
+  "yahoo": "CMCSA",
+  "match": "^COMCAST"
+ },
+ {
+  "id": "t-mobile",
+  "name": "T-Mobile US",
+  "short": "T-MOBILE",
+  "sector": "Telcm",
+  "color": "#AF9DBE",
+  "yahoo": "TMUS",
+  "match": "^T MOBILE|^METROPCS"
+ },
+ {
+  "id": "disney",
+  "name": "Walt Disney",
+  "short": "DISNEY",
+  "sector": "Other",
+  "color": "#3E4F8A",
+  "yahoo": "DIS",
+  "match": "^DISNEY"
+ },
+ {
+  "id": "time-warner",
+  "name": "Time Warner / AOL",
+  "short": "TIME WARNER",
+  "sector": "Other",
+  "color": "#C0577A",
+  "yahoo": null,
+  "match": "^TIME WARNER|^AOL|^AMERICA ONLINE"
+ },
+ {
+  "id": "berkshire",
+  "name": "Berkshire Hathaway",
+  "short": "BERKSHIRE",
+  "sector": "Money",
+  "color": "#8B6B4A",
+  "yahoo": "BRK-B",
+  "match": "^BERKSHIRE HATHAWAY"
+ },
+ {
+  "id": "jpmorgan",
+  "name": "JPMorgan Chase",
+  "short": "JPMORGAN",
+  "sector": "Money",
+  "color": "#4A5C75",
+  "yahoo": "JPM",
+  "match": "JPMORGAN|J P MORGAN CHASE|CHASE MANHATTAN|CHEMICAL BANKING|CHEMICAL NEW YORK"
+ },
+ {
+  "id": "jp-morgan-co",
+  "name": "J.P. Morgan & Co.",
+  "short": "J.P. MORGAN",
+  "sector": "Money",
+  "color": "#222E42",
+  "yahoo": null,
+  "match": "^MORGAN J P"
+ },
+ {
+  "id": "bank-of-america",
+  "name": "Bank of America",
+  "short": "BANK OF AMERICA",
+  "sector": "Money",
+  "color": "#B04A52",
+  "yahoo": "BAC",
+  "match": "^BANK OF AMERICA|NATIONSBANK|^NCNB"
+ },
+ {
+  "id": "bankamerica",
+  "name": "BankAmerica",
+  "short": "BANKAMERICA",
+  "sector": "Money",
+  "color": "#151D2B",
+  "yahoo": null,
+  "match": "^BANKAMERICA"
+ },
+ {
+  "id": "citigroup",
+  "name": "Citigroup",
+  "short": "CITIGROUP",
+  "sector": "Money",
+  "color": "#3F6EB5",
+  "yahoo": "C",
+  "match": "^CITIGROUP|^TRAVELERS GROUP"
+ },
+ {
+  "id": "citicorp",
+  "name": "Citicorp",
+  "short": "CITICORP",
+  "sector": "Money",
+  "color": "#273752",
+  "yahoo": null,
+  "match": "^CITICORP"
+ },
+ {
+  "id": "wells-fargo",
+  "name": "Wells Fargo",
+  "short": "WELLS FARGO",
+  "sector": "Money",
+  "color": "#B8923A",
+  "yahoo": "WFC",
+  "match": "^WELLS FARGO|^NORWEST"
+ },
+ {
+  "id": "goldman-sachs",
+  "name": "Goldman Sachs",
+  "short": "GOLDMAN",
+  "sector": "Money",
+  "color": "#334564",
+  "yahoo": "GS",
+  "match": "^GOLDMAN SACHS"
+ },
+ {
+  "id": "morgan-stanley",
+  "name": "Morgan Stanley",
+  "short": "MORGAN STANLEY",
+  "sector": "Money",
+  "color": "#466294",
+  "yahoo": "MS",
+  "match": "^MORGAN STANLEY"
+ },
+ {
+  "id": "merrill-lynch",
+  "name": "Merrill Lynch",
+  "short": "MERRILL",
+  "sector": "Money",
+  "color": "#212D43",
+  "yahoo": null,
+  "match": "^MERRILL LYNCH"
+ },
+ {
+  "id": "lehman",
+  "name": "Lehman Brothers",
+  "short": "LEHMAN",
+  "sector": "Money",
+  "color": "#627EB0",
+  "yahoo": null,
+  "match": "^LEHMAN"
+ },
+ {
+  "id": "american-express",
+  "name": "American Express",
+  "short": "AMEX",
+  "sector": "Money",
+  "color": "#151D2C",
+  "yahoo": "AXP",
+  "match": "^AMERICAN EXPRESS"
+ },
+ {
+  "id": "visa",
+  "name": "Visa",
+  "short": "VISA",
+  "sector": "Money",
+  "color": "#27407A",
+  "yahoo": "V",
+  "match": "^VISA INC"
+ },
+ {
+  "id": "mastercard",
+  "name": "Mastercard",
+  "short": "MASTERCARD",
+  "sector": "Money",
+  "color": "#C9873A",
+  "yahoo": "MA",
+  "match": "^MASTERCARD"
+ },
+ {
+  "id": "aig",
+  "name": "AIG",
+  "short": "AIG",
+  "sector": "Money",
+  "color": "#4E6EA5",
+  "yahoo": "AIG",
+  "match": "^AMERICAN INTERNATIONAL GROUP"
+ },
+ {
+  "id": "metlife",
+  "name": "MetLife",
+  "short": "METLIFE",
+  "sector": "Money",
+  "color": "#324565",
+  "yahoo": "MET",
+  "match": "^METLIFE"
+ },
+ {
+  "id": "blackrock",
+  "name": "BlackRock",
+  "short": "BLACKROCK",
+  "sector": "Money",
+  "color": "#496390",
+  "yahoo": "BLK",
+  "match": "^BLACKROCK"
+ },
+ {
+  "id": "schwab",
+  "name": "Charles Schwab",
+  "short": "SCHWAB",
+  "sector": "Money",
+  "color": "#202D44",
+  "yahoo": "SCHW",
+  "match": "^SCHWAB"
+ },
+ {
+  "id": "fannie-mae",
+  "name": "Fannie Mae",
+  "short": "FANNIE MAE",
+  "sector": "Money",
+  "color": "#607EB1",
+  "yahoo": null,
+  "match": "^FEDERAL NATIONAL MORTGAGE"
+ },
+ {
+  "id": "freddie-mac",
+  "name": "Freddie Mac",
+  "short": "FREDDIE MAC",
+  "sector": "Money",
+  "color": "#161D2B",
+  "yahoo": null,
+  "match": "^FEDERAL HOME LOAN MORTGAGE"
+ },
+ {
+  "id": "wachovia",
+  "name": "Wachovia",
+  "short": "WACHOVIA",
+  "sector": "Money",
+  "color": "#3A527B",
+  "yahoo": null,
+  "match": "^WACHOVIA"
+ },
+ {
+  "id": "johnson-johnson",
+  "name": "Johnson & Johnson",
+  "short": "J&J",
+  "sector": "Hlth",
+  "color": "#C25B4E",
+  "yahoo": "JNJ",
+  "match": "^JOHNSON & JOHNSON"
+ },
+ {
+  "id": "eli-lilly",
+  "name": "Eli Lilly",
+  "short": "LILLY",
+  "sector": "Hlth",
+  "color": "#C0463C",
+  "yahoo": "LLY",
+  "match": "^LILLY ELI"
+ },
+ {
+  "id": "merck",
+  "name": "Merck",
+  "short": "MERCK",
+  "sector": "Hlth",
+  "color": "#2A7F7A",
+  "yahoo": "MRK",
+  "match": "^MERCK"
+ },
+ {
+  "id": "pfizer",
+  "name": "Pfizer",
+  "short": "PFIZER",
+  "sector": "Hlth",
+  "color": "#4B5FA8",
+  "yahoo": "PFE",
+  "match": "^PFIZER"
+ },
+ {
+  "id": "abbvie",
+  "name": "AbbVie",
+  "short": "ABBVIE",
+  "sector": "Hlth",
+  "color": "#854357",
+  "yahoo": "ABBV",
+  "match": "^ABBVIE"
+ },
+ {
+  "id": "abbott",
+  "name": "Abbott",
+  "short": "ABBOTT",
+  "sector": "Hlth",
+  "color": "#BD8092",
+  "yahoo": "ABT",
+  "match": "^ABBOTT LABORATORIES"
+ },
+ {
+  "id": "bristol-myers",
+  "name": "Bristol-Myers Squibb",
+  "short": "BRISTOL-MYERS",
+  "sector": "Hlth",
+  "color": "#AC546E",
+  "yahoo": "BMY",
+  "match": "^BRISTOL MYERS"
+ },
+ {
+  "id": "unitedhealth",
+  "name": "UnitedHealth",
+  "short": "UNITEDHEALTH",
+  "sector": "Hlth",
+  "color": "#3F6E8C",
+  "yahoo": "UNH",
+  "match": "^UNITEDHEALTH"
+ },
+ {
+  "id": "amgen",
+  "name": "Amgen",
+  "short": "AMGEN",
+  "sector": "Hlth",
+  "color": "#B36C81",
+  "yahoo": "AMGN",
+  "match": "^AMGEN"
+ },
+ {
+  "id": "thermo-fisher",
+  "name": "Thermo Fisher",
+  "short": "THERMO FISHER",
+  "sector": "Hlth",
+  "color": "#CA91A2",
+  "yahoo": "TMO",
+  "match": "^THERMO"
+ },
+ {
+  "id": "medtronic",
+  "name": "Medtronic",
+  "short": "MEDTRONIC",
+  "sector": "Hlth",
+  "color": "#9D4F66",
+  "yahoo": "MDT",
+  "match": "^MEDTRONIC"
+ },
+ {
+  "id": "gilead",
+  "name": "Gilead",
+  "short": "GILEAD",
+  "sector": "Hlth",
+  "color": "#C794A3",
+  "yahoo": "GILD",
+  "match": "^GILEAD"
+ },
+ {
+  "id": "wyeth",
+  "name": "Wyeth",
+  "short": "WYETH",
+  "sector": "Hlth",
+  "color": "#874256",
+  "yahoo": null,
+  "match": "^AMERICAN HOME PRODUCTS|^WYETH"
+ },
+ {
+  "id": "schering-plough",
+  "name": "Schering-Plough",
+  "short": "SCHERING",
+  "sector": "Hlth",
+  "color": "#BF7F92",
+  "yahoo": null,
+  "match": "^SCHERING"
+ },
+ {
+  "id": "warner-lambert",
+  "name": "Warner-Lambert",
+  "short": "WARNER-LAMBERT",
+  "sector": "Hlth",
+  "color": "#A85870",
+  "yahoo": null,
+  "match": "^WARNER LAMBERT"
+ },
+ {
+  "id": "pharmacia",
+  "name": "Pharmacia / Upjohn",
+  "short": "PHARMACIA",
+  "sector": "Hlth",
+  "color": "#CA91A2",
+  "yahoo": null,
+  "match": "^PHARMACIA|^UPJOHN"
+ },
+ {
+  "id": "walmart",
+  "name": "Walmart",
+  "short": "WALMART",
+  "sector": "Shops",
+  "color": "#7DAAD0",
+  "yahoo": "WMT",
+  "match": "^WAL MART|^WALMART"
+ },
+ {
+  "id": "procter-gamble",
+  "name": "Procter & Gamble",
+  "short": "P&G",
+  "sector": "NoDur",
+  "color": "#5C7AA0",
+  "yahoo": "PG",
+  "match": "^PROCTER & GAMBLE"
+ },
+ {
+  "id": "coca-cola",
+  "name": "Coca-Cola",
+  "short": "COCA-COLA",
+  "sector": "NoDur",
+  "color": "#8A2A31",
+  "yahoo": "KO",
+  "match": "^COCA COLA CO"
+ },
+ {
+  "id": "pepsico",
+  "name": "PepsiCo",
+  "short": "PEPSICO",
+  "sector": "NoDur",
+  "color": "#2F5D9B",
+  "yahoo": "PEP",
+  "match": "^PEPSICO"
+ },
+ {
+  "id": "costco",
+  "name": "Costco",
+  "short": "COSTCO",
+  "sector": "Shops",
+  "color": "#B03A3A",
+  "yahoo": "COST",
+  "match": "^COSTCO"
+ },
+ {
+  "id": "philip-morris-intl",
+  "name": "Philip Morris Intl.",
+  "short": "PM INTL.",
+  "sector": "NoDur",
+  "color": "#D3BA88",
+  "yahoo": "PM",
+  "match": "^PHILIP MORRIS INTERNATIONAL"
+ },
+ {
+  "id": "altria",
+  "name": "Philip Morris / Altria",
+  "short": "ALTRIA",
+  "sector": "NoDur",
+  "color": "#6D8A5C",
+  "yahoo": "MO",
+  "match": "^PHILIP MORRIS|^ALTRIA"
+ },
+ {
+  "id": "mondelez",
+  "name": "Kraft / Mondelez",
+  "short": "MONDELEZ",
+  "sector": "NoDur",
+  "color": "#B99754",
+  "yahoo": "MDLZ",
+  "match": "^KRAFT|^MONDELEZ"
+ },
+ {
+  "id": "colgate",
+  "name": "Colgate-Palmolive",
+  "short": "COLGATE",
+  "sector": "NoDur",
+  "color": "#977739",
+  "yahoo": "CL",
+  "match": "^COLGATE"
+ },
+ {
+  "id": "gillette",
+  "name": "Gillette",
+  "short": "GILLETTE",
+  "sector": "NoDur",
+  "color": "#CCB27E",
+  "yahoo": null,
+  "match": "^GILLETTE"
+ },
+ {
+  "id": "anheuser-busch",
+  "name": "Anheuser-Busch",
+  "short": "ANHEUSER",
+  "sector": "NoDur",
+  "color": "#A98845",
+  "yahoo": null,
+  "match": "^ANHEUSER"
+ },
+ {
+  "id": "home-depot",
+  "name": "Home Depot",
+  "short": "HOME DEPOT",
+  "sector": "Shops",
+  "color": "#D3772F",
+  "yahoo": "HD",
+  "match": "^HOME DEPOT"
+ },
+ {
+  "id": "mcdonalds",
+  "name": "McDonald's",
+  "short": "MCDONALD'S",
+  "sector": "Shops",
+  "color": "#915D22",
+  "yahoo": "MCD",
+  "match": "^MCDONALDS"
+ },
+ {
+  "id": "nike",
+  "name": "Nike",
+  "short": "NIKE",
+  "sector": "NoDur",
+  "color": "#C7A869",
+  "yahoo": "NKE",
+  "match": "^NIKE"
+ },
+ {
+  "id": "lowes",
+  "name": "Lowe's",
+  "short": "LOWE'S",
+  "sector": "Shops",
+  "color": "#D39855",
+  "yahoo": "LOW",
+  "match": "^LOWES"
+ },
+ {
+  "id": "starbucks",
+  "name": "Starbucks",
+  "short": "STARBUCKS",
+  "sector": "Shops",
+  "color": "#C27A2A",
+  "yahoo": "SBUX",
+  "match": "^STARBUCKS"
+ },
+ {
+  "id": "sears",
+  "name": "Sears",
+  "short": "SEARS",
+  "sector": "Shops",
+  "color": "#6B7A8F",
+  "yahoo": null,
+  "match": "^SEARS ROEBUCK|^SEARS HOLDINGS|^SEARS INC"
+ },
+ {
+  "id": "kmart",
+  "name": "Kmart",
+  "short": "KMART",
+  "sector": "Shops",
+  "color": "#CD893D",
+  "yahoo": null,
+  "match": "^KMART|^S S KRESGE"
+ },
+ {
+  "id": "woolworth",
+  "name": "Woolworth",
+  "short": "WOOLWORTH",
+  "sector": "Shops",
+  "color": "#E0AA6D",
+  "yahoo": null,
+  "match": "^WOOLWORTH|^F W WOOLWORTH"
+ },
+ {
+  "id": "avon",
+  "name": "Avon",
+  "short": "AVON",
+  "sector": "NoDur",
+  "color": "#866B35",
+  "yahoo": null,
+  "match": "^AVON PRODUCTS"
+ },
+ {
+  "id": "gm",
+  "name": "General Motors",
+  "short": "GENERAL MOTORS",
+  "sector": "Durbl",
+  "color": "#7D6A56",
+  "yahoo": "GM",
+  "match": "^GENERAL MOTORS"
+ },
+ {
+  "id": "ford",
+  "name": "Ford",
+  "short": "FORD",
+  "sector": "Durbl",
+  "color": "#6D6154",
+  "yahoo": "F",
+  "match": "^FORD MOTOR"
+ },
+ {
+  "id": "chrysler",
+  "name": "Chrysler",
+  "short": "CHRYSLER",
+  "sector": "Durbl",
+  "color": "#B9AEA2",
+  "yahoo": null,
+  "match": "^CHRYSLER"
+ },
+ {
+  "id": "ge",
+  "name": "General Electric",
+  "short": "GENERAL ELECTRIC",
+  "sector": "Manuf",
+  "color": "#5B84B0",
+  "yahoo": "GE",
+  "match": "^GENERAL ELECTRIC"
+ },
+ {
+  "id": "boeing",
+  "name": "Boeing",
+  "short": "BOEING",
+  "sector": "Manuf",
+  "color": "#4F7EA5",
+  "yahoo": "BA",
+  "match": "^BOEING"
+ },
+ {
+  "id": "caterpillar",
+  "name": "Caterpillar",
+  "short": "CATERPILLAR",
+  "sector": "Manuf",
+  "color": "#7F8C9D",
+  "yahoo": "CAT",
+  "match": "^CATERPILLAR"
+ },
+ {
+  "id": "honeywell",
+  "name": "Honeywell",
+  "short": "HONEYWELL",
+  "sector": "Manuf",
+  "color": "#A1ACB9",
+  "yahoo": "HON",
+  "match": "^ALLIEDSIGNAL|^HONEYWELL INTERNATIONAL"
+ },
+ {
+  "id": "union-pacific",
+  "name": "Union Pacific",
+  "short": "UNION PACIFIC",
+  "sector": "Other",
+  "color": "#9B9383",
+  "yahoo": "UNP",
+  "match": "^UNION PACIFIC"
+ },
+ {
+  "id": "ups",
+  "name": "UPS",
+  "short": "UPS",
+  "sector": "Other",
+  "color": "#B6B0A5",
+  "yahoo": "UPS",
+  "match": "^UNITED PARCEL"
+ },
+ {
+  "id": "lockheed",
+  "name": "Lockheed Martin",
+  "short": "LOCKHEED",
+  "sector": "Manuf",
+  "color": "#6B7A8E",
+  "yahoo": "LMT",
+  "match": "^LOCKHEED"
+ },
+ {
+  "id": "rtx",
+  "name": "Raytheon / United Tech.",
+  "short": "RTX",
+  "sector": "Manuf",
+  "color": "#A2ACB8",
+  "yahoo": "RTX",
+  "match": "^UNITED TECHNOLOGIES|^RAYTHEON TECH"
+ },
+ {
+  "id": "mcdonnell-douglas",
+  "name": "McDonnell Douglas",
+  "short": "MCDONNELL D.",
+  "sector": "Manuf",
+  "color": "#8997A7",
+  "yahoo": null,
+  "match": "^MCDONNELL DOUGLAS"
+ },
+ {
+  "id": "3m",
+  "name": "3M",
+  "short": "3M",
+  "sector": "Manuf",
+  "color": "#A2ACB9",
+  "yahoo": "MMM",
+  "match": "^MINNESOTA MINING|^3M"
+ },
+ {
+  "id": "deere",
+  "name": "Deere",
+  "short": "DEERE",
+  "sector": "Manuf",
+  "color": "#9CA6B3",
+  "yahoo": "DE",
+  "match": "^DEERE"
+ },
+ {
+  "id": "us-steel",
+  "name": "U.S. Steel",
+  "short": "U.S. STEEL",
+  "sector": "Manuf",
+  "color": "#707A86",
+  "yahoo": null,
+  "match": "^UNITED STATES STEEL|^USX|^U S STEEL"
+ },
+ {
+  "id": "alcoa",
+  "name": "Alcoa",
+  "short": "ALCOA",
+  "sector": "Manuf",
+  "color": "#7E8C9E",
+  "yahoo": null,
+  "match": "^ALUMINUM CO OF AMERICA|^ALCOA"
+ },
+ {
+  "id": "tyco",
+  "name": "Tyco",
+  "short": "TYCO",
+  "sector": "Manuf",
+  "color": "#A2ACB8",
+  "yahoo": null,
+  "match": "^TYCO"
+ },
+ {
+  "id": "enron",
+  "name": "Enron",
+  "short": "ENRON",
+  "sector": "Enrgy",
+  "color": "#A03D37",
+  "yahoo": null,
+  "match": "^ENRON"
+ },
+ {
+  "id": "exxon",
+  "name": "Exxon (Standard Oil NJ)",
+  "short": "EXXON",
+  "sector": "Enrgy",
+  "color": "#B5382F",
+  "yahoo": "XOM",
+  "match": "STANDARD OIL CO N J|^EXXON"
+ },
+ {
+  "id": "mobil",
+  "name": "Mobil",
+  "short": "MOBIL",
+  "sector": "Enrgy",
+  "color": "#D9695F",
+  "yahoo": null,
+  "match": "^MOBIL CORP|^SOCONY|^STANDARD OIL CO N Y"
+ },
+ {
+  "id": "texaco",
+  "name": "Texaco",
+  "short": "TEXACO",
+  "sector": "Enrgy",
+  "color": "#8E3B2A",
+  "yahoo": null,
+  "match": "^TEXACO"
+ },
+ {
+  "id": "chevron",
+  "name": "Chevron (Socal)",
+  "short": "CHEVRON",
+  "sector": "Enrgy",
+  "color": "#C7783A",
+  "yahoo": "CVX",
+  "match": "STANDARD OIL CO CALIF|^CHEVRON"
+ },
+ {
+  "id": "amoco",
+  "name": "Amoco (Standard Oil IN)",
+  "short": "AMOCO",
+  "sector": "Enrgy",
+  "color": "#B24B44",
+  "yahoo": null,
+  "match": "STANDARD OIL CO IND|^AMOCO"
+ },
+ {
+  "id": "gulf",
+  "name": "Gulf Oil",
+  "short": "GULF",
+  "sector": "Enrgy",
+  "color": "#89352F",
+  "yahoo": null,
+  "match": "^GULF OIL"
+ },
+ {
+  "id": "arco",
+  "name": "Atlantic Richfield",
+  "short": "ARCO",
+  "sector": "Enrgy",
+  "color": "#C9706A",
+  "yahoo": null,
+  "match": "^ATLANTIC RICHFIELD"
+ },
+ {
+  "id": "sohio",
+  "name": "Standard Oil Ohio / BP America",
+  "short": "SOHIO",
+  "sector": "Enrgy",
+  "color": "#9C413B",
+  "yahoo": null,
+  "match": "STANDARD OIL CO OH|^SOHIO|^BP AMERICA"
+ },
+ {
+  "id": "conoco",
+  "name": "Conoco",
+  "short": "CONOCO",
+  "sector": "Enrgy",
+  "color": "#C55C55",
+  "yahoo": null,
+  "match": "^CONOCO INC|^CONTINENTAL OIL"
+ },
+ {
+  "id": "conocophillips",
+  "name": "Phillips / ConocoPhillips",
+  "short": "CONOCOPHILLIPS",
+  "sector": "Enrgy",
+  "color": "#79302B",
+  "yahoo": "COP",
+  "match": "^PHILLIPS PETROLEUM|^CONOCOPHILLIPS"
+ },
+ {
+  "id": "occidental",
+  "name": "Occidental",
+  "short": "OCCIDENTAL",
+  "sector": "Enrgy",
+  "color": "#CF8782",
+  "yahoo": "OXY",
+  "match": "^OCCIDENTAL PETROLEUM"
+ },
+ {
+  "id": "slb",
+  "name": "Schlumberger / SLB",
+  "short": "SLB",
+  "sector": "Enrgy",
+  "color": "#602521",
+  "yahoo": "SLB",
+  "match": "^SCHLUMBERGER|^SLB"
+ },
+ {
+  "id": "eog",
+  "name": "EOG Resources",
+  "short": "EOG",
+  "sector": "Enrgy",
+  "color": "#B44841",
+  "yahoo": "EOG",
+  "match": "^EOG RESOURCES"
+ },
+ {
+  "id": "halliburton",
+  "name": "Halliburton",
+  "short": "HALLIBURTON",
+  "sector": "Enrgy",
+  "color": "#863833",
+  "yahoo": null,
+  "match": "^HALLIBURTON"
+ },
+ {
+  "id": "dupont",
+  "name": "DuPont",
+  "short": "DUPONT",
+  "sector": "Chems",
+  "color": "#B8452F",
+  "yahoo": null,
+  "match": "^DU PONT|^DUPONT E I|^E I DU PONT|^DOWDUPONT|^DUPONT DE NEMOURS"
+ },
+ {
+  "id": "dow",
+  "name": "Dow",
+  "short": "DOW",
+  "sector": "Chems",
+  "color": "#ABB577",
+  "yahoo": "DOW",
+  "match": "^DOW CHEMICAL|^DOW INC"
+ },
+ {
+  "id": "union-carbide",
+  "name": "Union Carbide",
+  "short": "UNION CARBIDE",
+  "sector": "Chems",
+  "color": "#6D7542",
+  "yahoo": null,
+  "match": "^UNION CARBIDE"
+ },
+ {
+  "id": "monsanto",
+  "name": "Monsanto",
+  "short": "MONSANTO",
+  "sector": "Chems",
+  "color": "#BEC794",
+  "yahoo": null,
+  "match": "^MONSANTO"
+ },
+ {
+  "id": "linde",
+  "name": "Linde / Praxair",
+  "short": "LINDE",
+  "sector": "Chems",
+  "color": "#585F34",
+  "yahoo": "LIN",
+  "match": "^LINDE|^PRAXAIR"
+ },
+ {
+  "id": "nextera",
+  "name": "NextEra Energy",
+  "short": "NEXTERA",
+  "sector": "Utils",
+  "color": "#317D74",
+  "yahoo": "NEE",
+  "match": "^NEXTERA|^FLORIDA POWER & LIGHT|^FPL GROUP"
+ },
+ {
+  "id": "duke-energy",
+  "name": "Duke Energy",
+  "short": "DUKE",
+  "sector": "Utils",
+  "color": "#46AA9F",
+  "yahoo": "DUK",
+  "match": "^DUKE ENERGY|^DUKE POWER"
+ },
+ {
+  "id": "southern",
+  "name": "Southern Co.",
+  "short": "SOUTHERN",
+  "sector": "Utils",
+  "color": "#255651",
+  "yahoo": "SO",
+  "match": "^SOUTHERN CO"
+ },
+ {
+  "id": "texas-utilities",
+  "name": "Texas Utilities",
+  "short": "TEXAS UTIL.",
+  "sector": "Utils",
+  "color": "#66C3B8",
+  "yahoo": null,
+  "match": "^TEXAS UTILITIES|^TXU"
+ },
+ {
+  "id": "paypal",
+  "name": "PayPal",
+  "short": "PAYPAL",
+  "sector": "BusEq",
+  "color": "#528BB4",
+  "yahoo": null,
+  "match": "^PAYPAL"
+ },
+ {
+  "id": "danaher",
+  "name": "Danaher",
+  "short": "DANAHER",
+  "sector": "Manuf",
+  "color": "#6A7A8E",
+  "yahoo": null,
+  "match": "DANAHER"
+ },
+ {
+  "id": "emc",
+  "name": "EMC",
+  "short": "EMC",
+  "sector": "BusEq",
+  "color": "#396B8F",
+  "yahoo": null,
+  "match": "^E M C CORP"
+ },
+ {
+  "id": "yahoo",
+  "name": "Yahoo",
+  "short": "YAHOO",
+  "sector": "BusEq",
+  "color": "#7BA8C8",
+  "yahoo": null,
+  "match": "^YAHOO"
+ },
+ {
+  "id": "jds-uniphase",
+  "name": "JDS Uniphase",
+  "short": "JDS UNIPHASE",
+  "sector": "BusEq",
+  "color": "#467BA1",
+  "yahoo": null,
+  "match": "^J D S UNIPHASE"
+ },
+ {
+  "id": "ebay",
+  "name": "eBay",
+  "short": "EBAY",
+  "sector": "Shops",
+  "color": "#AE7029",
+  "yahoo": null,
+  "match": "^EBAY"
+ },
+ {
+  "id": "genentech",
+  "name": "Genentech",
+  "short": "GENENTECH",
+  "sector": "Hlth",
+  "color": "#B46B80",
+  "yahoo": null,
+  "match": "^GENENTECH"
+ },
+ {
+  "id": "westinghouse",
+  "name": "Westinghouse",
+  "short": "WESTINGHOUSE",
+  "sector": "Manuf",
+  "color": "#A2ACB9",
+  "yahoo": null,
+  "match": "^WESTINGHOUSE ELECTRIC"
+ },
+ {
+  "id": "viacom",
+  "name": "Viacom / Paramount",
+  "short": "PARAMOUNT",
+  "sector": "Other",
+  "color": "#B4AEA1",
+  "yahoo": null,
+  "match": "^VIACOM|^PARAMOUNT|^C B S CORP NEW"
+ },
+ {
+  "id": "rjr-nabisco",
+  "name": "Nabisco",
+  "short": "NABISCO",
+  "sector": "NoDur",
+  "color": "#CFB98B",
+  "yahoo": null,
+  "match": "NABISCO|^NATIONAL BISCUIT"
+ },
+ {
+  "id": "waste-management",
+  "name": "Waste Management",
+  "short": "WASTE MGMT.",
+  "sector": "Other",
+  "color": "#B6B1A5",
+  "yahoo": null,
+  "match": "^WASTE MANAGEMENT|^W M X TECH"
+ },
+ {
+  "id": "shell-oil",
+  "name": "Shell Oil",
+  "short": "SHELL OIL",
+  "sector": "Enrgy",
+  "color": "#CB6E68",
+  "yahoo": null,
+  "match": "^SHELL OIL|^SHELL UNION"
+ },
+ {
+  "id": "getty",
+  "name": "Getty Oil",
+  "short": "GETTY",
+  "sector": "Enrgy",
+  "color": "#9E3F39",
+  "yahoo": null,
+  "match": "^GETTY OIL|^PACIFIC WESTN OIL"
+ },
+ {
+  "id": "unocal",
+  "name": "Unocal",
+  "short": "UNOCAL",
+  "sector": "Enrgy",
+  "color": "#C06059",
+  "yahoo": null,
+  "match": "^UNION OIL CO CALIF|^UNOCAL"
+ },
+ {
+  "id": "sunoco",
+  "name": "Sun Oil / Sunoco",
+  "short": "SUNOCO",
+  "sector": "Enrgy",
+  "color": "#7A2F2A",
+  "yahoo": null,
+  "match": "^SUN INC|^SUN OIL|^SUNOCO"
+ },
+ {
+  "id": "tenneco",
+  "name": "Tenneco",
+  "short": "TENNECO",
+  "sector": "Enrgy",
+  "color": "#D18580",
+  "yahoo": null,
+  "match": "^TENNECO|^TENNESSEE GAS"
+ },
+ {
+  "id": "marathon",
+  "name": "Marathon Oil",
+  "short": "MARATHON",
+  "sector": "Enrgy",
+  "color": "#5D2723",
+  "yahoo": null,
+  "match": "^MARATHON OIL|^OHIO OIL|^TRANSCONTINENTAL OIL"
+ },
+ {
+  "id": "superior-oil",
+  "name": "Superior Oil",
+  "short": "SUPERIOR OIL",
+  "sector": "Enrgy",
+  "color": "#B7463F",
+  "yahoo": null,
+  "match": "^SUPERIOR OIL"
+ },
+ {
+  "id": "cities-service",
+  "name": "Cities Service",
+  "short": "CITIES SERVICE",
+  "sector": "Enrgy",
+  "color": "#883631",
+  "yahoo": null,
+  "match": "^CITIES SERVICE"
+ },
+ {
+  "id": "creole",
+  "name": "Creole Petroleum",
+  "short": "CREOLE",
+  "sector": "Enrgy",
+  "color": "#C7726C",
+  "yahoo": null,
+  "match": "^CREOLE PETROLEUM"
+ },
+ {
+  "id": "sinclair",
+  "name": "Sinclair Oil",
+  "short": "SINCLAIR",
+  "sector": "Enrgy",
+  "color": "#A03D37",
+  "yahoo": null,
+  "match": "^CONSOLIDATED OIL CORP|^SINCLAIR"
+ },
+ {
+  "id": "amerada",
+  "name": "Amerada Petroleum",
+  "short": "AMERADA",
+  "sector": "Enrgy",
+  "color": "#C25E57",
+  "yahoo": null,
+  "match": "^AMERADA"
+ },
+ {
+  "id": "pacific-oil",
+  "name": "Pacific Oil",
+  "short": "PACIFIC OIL",
+  "sector": "Enrgy",
+  "color": "#77322D",
+  "yahoo": null,
+  "match": "^PACIFIC OIL CO"
+ },
+ {
+  "id": "pan-american-petroleum",
+  "name": "Pan American Petroleum",
+  "short": "PAN AM. PETROL.",
+  "sector": "Enrgy",
+  "color": "#D3847E",
+  "yahoo": null,
+  "match": "^PAN AMERICAN PETROL"
+ },
+ {
+  "id": "radioshack",
+  "name": "Tandy / RadioShack",
+  "short": "RADIOSHACK",
+  "sector": "Shops",
+  "color": "#DEB07D",
+  "yahoo": null,
+  "match": "^TANDY|^RADIOSHACK|^AMERICAN HIDE"
+ },
+ {
+  "id": "penney",
+  "name": "J.C. Penney",
+  "short": "J.C. PENNEY",
+  "sector": "Shops",
+  "color": "#945D20",
+  "yahoo": null,
+  "match": "^PENNEY J C|^PENNEY"
+ },
+ {
+  "id": "montgomery-ward",
+  "name": "Montgomery Ward / Marcor",
+  "short": "MONTGOMERY WARD",
+  "sector": "Shops",
+  "color": "#D69852",
+  "yahoo": null,
+  "match": "^MARCOR|^MONTGOMERY WARD"
+ },
+ {
+  "id": "itt",
+  "name": "ITT",
+  "short": "ITT",
+  "sector": "Manuf",
+  "color": "#8A97A6",
+  "yahoo": null,
+  "match": "^I T T |^INTERNATIONAL TEL"
+ },
+ {
+  "id": "rca",
+  "name": "RCA",
+  "short": "RCA",
+  "sector": "BusEq",
+  "color": "#679CC3",
+  "yahoo": null,
+  "match": "^R C A CORP|^RADIO CORP"
+ },
+ {
+  "id": "corning",
+  "name": "Corning",
+  "short": "CORNING",
+  "sector": "Manuf",
+  "color": "#A1ACB9",
+  "yahoo": null,
+  "match": "^CORNING"
+ },
+ {
+  "id": "weyerhaeuser",
+  "name": "Weyerhaeuser",
+  "short": "WEYERHAEUSER",
+  "sector": "Other",
+  "color": "#B6B0A5",
+  "yahoo": null,
+  "match": "^WEYERHAEUSER"
+ },
+ {
+  "id": "georgia-pacific",
+  "name": "Georgia-Pacific",
+  "short": "GEORGIA-PACIFIC",
+  "sector": "Other",
+  "color": "#B6B1A4",
+  "yahoo": null,
+  "match": "^GEORGIA PACIFIC"
+ },
+ {
+  "id": "international-paper",
+  "name": "International Paper",
+  "short": "INTL. PAPER",
+  "sector": "Other",
+  "color": "#AAA497",
+  "yahoo": null,
+  "match": "^INTERNATIONAL PAPER"
+ },
+ {
+  "id": "crown-zellerbach",
+  "name": "Crown Zellerbach",
+  "short": "CROWN ZELLERBACH",
+  "sector": "Other",
+  "color": "#B6B0A5",
+  "yahoo": null,
+  "match": "^CROWN ZELLERBACH"
+ },
+ {
+  "id": "smithkline",
+  "name": "SmithKline",
+  "short": "SMITHKLINE",
+  "sector": "Hlth",
+  "color": "#C794A3",
+  "yahoo": null,
+  "match": "^SMITH KLINE|^SMITHKLINE"
+ },
+ {
+  "id": "sterling-drug",
+  "name": "Sterling Drug",
+  "short": "STERLING DRUG",
+  "sector": "Hlth",
+  "color": "#9F4D65",
+  "yahoo": null,
+  "match": "^DRUG INC|^STERLING DRUG|^STERLING PRODS"
+ },
+ {
+  "id": "pacific-telephone",
+  "name": "Pacific Telephone",
+  "short": "PACIFIC TEL.",
+  "sector": "Telcm",
+  "color": "#4E3C5E",
+  "yahoo": null,
+  "match": "^PACIFIC TELEPHONE"
+ },
+ {
+  "id": "general-foods",
+  "name": "General Foods",
+  "short": "GENERAL FOODS",
+  "sector": "NoDur",
+  "color": "#6E5729",
+  "yahoo": null,
+  "match": "^GENERAL FOODS|^POSTUM"
+ },
+ {
+  "id": "united-fruit",
+  "name": "United Fruit / Chiquita",
+  "short": "UNITED FRUIT",
+  "sector": "NoDur",
+  "color": "#BB9852",
+  "yahoo": null,
+  "match": "^UNITED FRUIT|^UNITED BRANDS|^CHIQUITA"
+ },
+ {
+  "id": "american-brands",
+  "name": "American Tobacco / American Brands",
+  "short": "AMERICAN BRANDS",
+  "sector": "NoDur",
+  "color": "#93763C",
+  "yahoo": null,
+  "match": "^AMERICAN BRANDS|^AMERICAN TOB|^FORTUNE BRANDS|^BEAM INC"
+ },
+ {
+  "id": "liggett",
+  "name": "Liggett & Myers",
+  "short": "LIGGETT",
+  "sector": "NoDur",
+  "color": "#CEB37C",
+  "yahoo": null,
+  "match": "^LIGGETT"
+ },
+ {
+  "id": "schenley",
+  "name": "Schenley",
+  "short": "SCHENLEY",
+  "sector": "NoDur",
+  "color": "#AB8843",
+  "yahoo": null,
+  "match": "^SCHENLEY"
+ },
+ {
+  "id": "standard-brands",
+  "name": "Standard Brands",
+  "short": "STANDARD BRANDS",
+  "sector": "NoDur",
+  "color": "#C3A66D",
+  "yahoo": null,
+  "match": "^FLEISCHMANN|^STANDARD BRANDS"
+ },
+ {
+  "id": "borden",
+  "name": "Borden",
+  "short": "BORDEN",
+  "sector": "NoDur",
+  "color": "#886C33",
+  "yahoo": null,
+  "match": "^BORDEN"
+ },
+ {
+  "id": "bestfoods",
+  "name": "CPC / Bestfoods",
+  "short": "BESTFOODS",
+  "sector": "NoDur",
+  "color": "#D1B98A",
+  "yahoo": null,
+  "match": "^BESTFOODS|^C P C INTERNATIONAL|^CORN PRODUCTS"
+ },
+ {
+  "id": "commonwealth-edison",
+  "name": "Commonwealth Edison",
+  "short": "COMMONWEALTH ED.",
+  "sector": "Utils",
+  "color": "#193E3A",
+  "yahoo": null,
+  "match": "^COMMONWEALTH EDISON|^UNICOM"
+ },
+ {
+  "id": "pge",
+  "name": "Pacific Gas & Electric",
+  "short": "PG&E",
+  "sector": "Utils",
+  "color": "#3D8F86",
+  "yahoo": null,
+  "match": "^P G & E|^PACIFIC GAS"
+ },
+ {
+  "id": "aep",
+  "name": "American Electric Power",
+  "short": "AEP",
+  "sector": "Utils",
+  "color": "#286760",
+  "yahoo": null,
+  "match": "^AMERICAN ELECTRIC POWER|^AMERICAN GAS & ELEC"
+ },
+ {
+  "id": "con-edison",
+  "name": "Consolidated Edison",
+  "short": "CON EDISON",
+  "sector": "Utils",
+  "color": "#52B8AC",
+  "yahoo": null,
+  "match": "^CONSOLIDATED EDISON|^CONSOLIDATED GAS CO"
+ },
+ {
+  "id": "philadelphia-co",
+  "name": "Philadelphia Co.",
+  "short": "PHILADELPHIA CO.",
+  "sector": "Utils",
+  "color": "#347A72",
+  "yahoo": null,
+  "match": "^PHILADELPHIA CO\\b"
+ },
+ {
+  "id": "columbia-gas",
+  "name": "Columbia Gas",
+  "short": "COLUMBIA GAS",
+  "sector": "Utils",
+  "color": "#44ADA1",
+  "yahoo": null,
+  "match": "^COLUMBIA ENERGY|^COLUMBIA GAS"
+ },
+ {
+  "id": "ugi",
+  "name": "United Gas Improvement",
+  "short": "UGI",
+  "sector": "Utils",
+  "color": "#245751",
+  "yahoo": null,
+  "match": "^U G I CORP|^UNITED GAS IMPROVEMENT"
+ },
+ {
+  "id": "north-american-co",
+  "name": "North American Co.",
+  "short": "NORTH AMERICAN",
+  "sector": "Utils",
+  "color": "#69BFB5",
+  "yahoo": null,
+  "match": "^NORTH AMERICAN CO\\b"
+ },
+ {
+  "id": "public-service",
+  "name": "Public Service Corp.",
+  "short": "PUBLIC SERVICE",
+  "sector": "Utils",
+  "color": "#193F3A",
+  "yahoo": null,
+  "match": "^PUBLIC SVC CORP"
+ },
+ {
+  "id": "martin-marietta",
+  "name": "Martin Marietta",
+  "short": "MARTIN MARIETTA",
+  "sector": "Manuf",
+  "color": "#9BA6B4",
+  "yahoo": null,
+  "match": "^MARTIN MARIETTA|^MARTIN CO\\b|^MARTIN GLENN"
+ },
+ {
+  "id": "bethlehem-steel",
+  "name": "Bethlehem Steel",
+  "short": "BETHLEHEM STEEL",
+  "sector": "Manuf",
+  "color": "#A2ACB8",
+  "yahoo": null,
+  "match": "^BETHLEHEM STEEL"
+ },
+ {
+  "id": "republic-steel",
+  "name": "Republic Steel",
+  "short": "REPUBLIC STEEL",
+  "sector": "Manuf",
+  "color": "#7D8C9F",
+  "yahoo": null,
+  "match": "^REPUBLIC IRON|^REPUBLIC STEEL"
+ },
+ {
+  "id": "kennecott",
+  "name": "Kennecott Copper",
+  "short": "KENNECOTT",
+  "sector": "Manuf",
+  "color": "#A2ACB9",
+  "yahoo": null,
+  "match": "^KENNECOTT"
+ },
+ {
+  "id": "anaconda",
+  "name": "Anaconda Copper",
+  "short": "ANACONDA",
+  "sector": "Manuf",
+  "color": "#6B7A8D",
+  "yahoo": null,
+  "match": "^ANACONDA"
+ },
+ {
+  "id": "utah-copper",
+  "name": "Utah Copper",
+  "short": "UTAH COPPER",
+  "sector": "Manuf",
+  "color": "#A1ACB9",
+  "yahoo": null,
+  "match": "^UTAH COPPER"
+ },
+ {
+  "id": "chile-copper",
+  "name": "Chile Copper",
+  "short": "CHILE COPPER",
+  "sector": "Manuf",
+  "color": "#8A97A7",
+  "yahoo": null,
+  "match": "^CHILE COPPER"
+ },
+ {
+  "id": "kaiser-aluminum",
+  "name": "Kaiser Aluminum",
+  "short": "KAISER ALUMINUM",
+  "sector": "Manuf",
+  "color": "#A2ACB8",
+  "yahoo": null,
+  "match": "^KAISER ALUMINUM"
+ },
+ {
+  "id": "international-harvester",
+  "name": "International Harvester",
+  "short": "INTL. HARVESTER",
+  "sector": "Manuf",
+  "color": "#9BA6B4",
+  "yahoo": null,
+  "match": "^INTERNATIONAL HARVESTER|^NAVISTAR"
+ },
+ {
+  "id": "american-standard",
+  "name": "American Standard",
+  "short": "AMERICAN STANDARD",
+  "sector": "Manuf",
+  "color": "#A2ACB9",
+  "yahoo": null,
+  "match": "^AMERICAN RADIATOR|^AMERICAN STANDARD"
+ },
+ {
+  "id": "american-can",
+  "name": "American Can / Primerica",
+  "short": "AMERICAN CAN",
+  "sector": "Manuf",
+  "color": "#7F8C9D",
+  "yahoo": null,
+  "match": "^AMERICAN CAN|^PRIMERICA"
+ },
+ {
+  "id": "continental-can",
+  "name": "Continental Can",
+  "short": "CONTINENTAL CAN",
+  "sector": "Manuf",
+  "color": "#A1ACB9",
+  "yahoo": null,
+  "match": "^CONTINENTAL CAN|^CONTINENTAL GROUP"
+ },
+ {
+  "id": "pullman",
+  "name": "Pullman",
+  "short": "PULLMAN",
+  "sector": "Manuf",
+  "color": "#6B7A8E",
+  "yahoo": null,
+  "match": "^PULLMAN"
+ },
+ {
+  "id": "goodyear",
+  "name": "Goodyear",
+  "short": "GOODYEAR",
+  "sector": "Durbl",
+  "color": "#594F44",
+  "yahoo": null,
+  "match": "^GOODYEAR"
+ },
+ {
+  "id": "firestone",
+  "name": "Firestone",
+  "short": "FIRESTONE",
+  "sector": "Durbl",
+  "color": "#988A7A",
+  "yahoo": null,
+  "match": "^FIRESTONE"
+ },
+ {
+  "id": "studebaker",
+  "name": "Studebaker-Packard",
+  "short": "STUDEBAKER",
+  "sector": "Durbl",
+  "color": "#7A6C5C",
+  "yahoo": null,
+  "match": "^PACKARD MTR|^STUDEBAKER"
+ },
+ {
+  "id": "fisher-body",
+  "name": "Fisher Body",
+  "short": "FISHER BODY",
+  "sector": "Durbl",
+  "color": "#B4A99C",
+  "yahoo": null,
+  "match": "^FISHER BODY"
+ },
+ {
+  "id": "national-lead",
+  "name": "National Lead",
+  "short": "NATIONAL LEAD",
+  "sector": "Chems",
+  "color": "#9BA762",
+  "yahoo": null,
+  "match": "^N L INDUSTRIES|^NATIONAL LEAD"
+ },
+ {
+  "id": "american-cyanamid",
+  "name": "American Cyanamid",
+  "short": "CYANAMID",
+  "sector": "Chems",
+  "color": "#7A8546",
+  "yahoo": null,
+  "match": "^AMERICAN CYANAMID"
+ },
+ {
+  "id": "ppg",
+  "name": "PPG",
+  "short": "PPG",
+  "sector": "Chems",
+  "color": "#B5BE88",
+  "yahoo": null,
+  "match": "^P P G INDUSTRIES|^PITTSBURGH PLATE"
+ },
+ {
+  "id": "penn-central",
+  "name": "Pennsylvania Railroad / Penn Central",
+  "short": "PENN CENTRAL",
+  "sector": "Other",
+  "color": "#9B9382",
+  "yahoo": null,
+  "match": "^PENN CENTRAL|^PENNSYLVANIA RAILROAD|^PENNSYLVANIA NEW YORK"
+ },
+ {
+  "id": "new-york-central",
+  "name": "New York Central",
+  "short": "NY CENTRAL",
+  "sector": "Other",
+  "color": "#B6B1A5",
+  "yahoo": null,
+  "match": "^NEW YORK CENT"
+ },
+ {
+  "id": "atchison",
+  "name": "Santa Fe Railway",
+  "short": "SANTA FE",
+  "sector": "Other",
+  "color": "#B3AEA2",
+  "yahoo": null,
+  "match": "^ATCHISON"
+ },
+ {
+  "id": "chesapeake-ohio",
+  "name": "Chesapeake & Ohio",
+  "short": "C&O",
+  "sector": "Other",
+  "color": "#B6B1A4",
+  "yahoo": null,
+  "match": "^CHESAPEAKE & OHIO|^CHESSIE"
+ },
+ {
+  "id": "southern-pacific",
+  "name": "Southern Pacific",
+  "short": "SOUTHERN PACIFIC",
+  "sector": "Other",
+  "color": "#B6B1A5",
+  "yahoo": null,
+  "match": "^SOUTHERN PACIFIC"
+ },
+ {
+  "id": "norfolk-western",
+  "name": "Norfolk & Western",
+  "short": "NORFOLK & WESTERN",
+  "sector": "Other",
+  "color": "#B6B0A5",
+  "yahoo": null,
+  "match": "^NORFOLK & WESTERN"
+ },
+ {
+  "id": "delaware-lackawanna",
+  "name": "Delaware, Lackawanna & Western",
+  "short": "DL&W",
+  "sector": "Other",
+  "color": "#ABA496",
+  "yahoo": null,
+  "match": "^DELAWARE LACK"
+ },
+ {
+  "id": "interco",
+  "name": "Interco",
+  "short": "INTERCO",
+  "sector": "Other",
+  "color": "#B6B1A5",
+  "yahoo": null,
+  "match": "^FURNITURE BRANDS|^INTERCO"
+ },
+ {
+  "id": "national-city-bank",
+  "name": "National City Bank NY",
+  "short": "NATIONAL CITY",
+  "sector": "Money",
+  "color": "#283751",
+  "yahoo": null,
+  "match": "^NATIONAL CITY BK"
+ },
+ {
+  "id": "transamerica",
+  "name": "Transamerica",
+  "short": "TRANSAMERICA",
+  "sector": "Money",
+  "color": "#526FA1",
+  "yahoo": null,
+  "match": "^TRANSAMERICA"
+ },
+ {
+  "id": "united-corp",
+  "name": "United Corp.",
+  "short": "UNITED CORP.",
+  "sector": "Money",
+  "color": "#304467",
+  "yahoo": null,
+  "match": "^UNITED CORP\\b"
+ }
+]
