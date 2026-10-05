@@ -473,6 +473,7 @@
     state.sel = idxFromEvent(e);
     if (id) state.iso = state.iso === id ? null : id; else state.iso = null;
     applyDim(); renderKeys(); renderLedger(state.sel);
+    if (G.W < 560) inline(state.sel); else showTip(state.sel, e);   // refresh the readout now, not on the next mouse move
   });
   svg.addEventListener('touchmove', (e) => {
     if (!e.touches[0] || !inPlot(e.touches[0])) return;
