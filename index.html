@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  UPDATE POLICY: every data update is a FULL update across the whole page. Label the latest period by
+  month ("Jul 2026"), and refresh every part that uses the data: chart, key-figure strip, standfirst,
+  method text, caveats, sources, footer date and aria-labels. All of these are generated from
+  market.js, so a rebuild updates them together.
+  DATA UPDATE LOG: python pipeline/refresh.py rebuilds site/market.js from data/derived.
+    - Index total and sector weights: Kenneth French Data Library (Portfolios_Formed_on_ME,
+      12_Industry_Portfolios), re-downloaded by pipeline/01_totals_french.py; French publishes with a
+      lag of about one month.
+    - Companies, free tier: pipeline/02_companies_free.py (Yahoo daily prices x SEC XBRL shares).
+    - Companies, CRSP: pipeline/wrds_pull.py then pipeline/refresh.py --wrds. When market.js reports
+      companyTier = "wrds" the page opens on Companies and the caveats change automatically.
+  LAST UPDATED: see the footer (built date in market.js).
+-->
+<title>S&amp;P 500 since 1926</title>
+<meta property="og:title" content="S&amp;P 500 since 1926">
+<meta property="og:description" content="The largest US companies by market value, month by month from 1926.">
+<meta name="description" content="The S&P 500 by weight, 1957 to today: each company's and sector's share of index market value, with the index total on a logarithmic scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══ DESIGN TOKENS - white ground, ink greys, blue for the index level (a level), nothing else
+   saturated except the bands, which carry company and sector colour as identity ═══════════ */
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF;             /* white ground                                   */
+  --bg-sunk:#F7F8F9;        /* collapsed panels, row hover                    */
+  --ink:#0F1113;            /* titles, values                                 */
+  --ink-2:#5C636B;          /* body copy, annotation descriptions             */
+  --ink-label:#7B8189;      /* section eyebrows, stat labels                  */
+  --ink-3:#9AA0A8;          /* axis ticks, source notes                       */
+  --rule:#E7E9EB;           /* gridlines, hairline dividers                   */
+  --rule-2:#D8DBDE;         /* section rules, panel borders, seams            */
+  --axis:#C9CDD1;           /* baseline                                       */
+  --blue:#006E93;           /* the index level - the workhorse                */
+  --rest:#DCDEE0;           /* "rest of the index" band                       */
+  --sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;
+  font-feature-settings:"tnum" 1;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ink);color:var(--bg)}
+.wrap{max-width:1200px;margin:0 auto;padding:44px 28px 96px}
+
+/* ── type ── */
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin:0 0 18px}
+h1{font-size:clamp(34px,5.2vw,58px);font-weight:700;letter-spacing:-.028em;line-height:1.02;margin:0;max-width:19ch}
+.stand{max-width:66ch;margin:20px 0 0;font-size:19.5px;line-height:1.5;color:var(--ink-2)}
+h2{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-label);
+  margin:0 0 16px;padding-top:14px;border-top:2px solid var(--ink)}
+h4{font-size:17px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
+p{margin:0 0 13px}
+a{color:var(--blue);text-underline-offset:2px;text-decoration-thickness:.6px}
+.lede{font-size:15.5px;color:var(--ink-2);margin:0 0 16px;max-width:62ch}
+
+/* ── view switch (Bay Area map pattern) ── */
+.modeswitch{position:relative;display:inline-flex;margin:28px 0 0;border:1.5px solid var(--ink);background:var(--bg);user-select:none}
+.modeswitch button{position:relative;z-index:1;font-family:inherit;background:none;border:none;cursor:pointer;padding:13px 28px;
+  font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);transition:color .3s}
+.modeswitch button+button{border-left:1.5px solid var(--ink)}
+.modeswitch button:hover{color:var(--ink)}
+.modeswitch button[aria-pressed=true]{color:var(--bg)}
+.mode-indicator{position:absolute;z-index:0;top:0;bottom:0;left:0;width:0;background:var(--blue);
+  transition:left .3s cubic-bezier(.65,0,.35,1),width .3s cubic-bezier(.65,0,.35,1)}
+
+/* ── key-figure strip: rules do the work, not cards ── */
+.strip{display:flex;flex-wrap:wrap;margin:40px 0 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip div{padding:15px 30px 14px 0;margin-right:30px;border-right:1px solid var(--rule)}
+.strip div:last-child{border-right:0;margin-right:0}
+.strip b{display:block;font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.12}
+.strip span{font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-label)}
+@media(max-width:720px){.strip{display:grid;grid-template-columns:1fr 1fr}.strip div{margin:0;padding:14px 16px 14px 0;border-right:0;border-bottom:1px solid var(--rule)}.strip b{font-size:26px}}
+
+/* ── figure ── */
+.figure{margin:46px 0 0}
+.togglerow{display:flex;flex-wrap:wrap;gap:12px 34px;margin:0 0 20px;align-items:center}
+.tg{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tg>span{font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-label)}
+.tg div{display:flex;gap:9px;flex-wrap:wrap}
+button.metric{font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;background:transparent;
+  color:var(--ink);border:1px solid var(--ink);padding:8px 14px;cursor:pointer}
+button.metric:hover{background:var(--bg-sunk)}
+button.metric[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.readout{display:none;font-size:15px;color:var(--ink-2);margin:0 0 8px;min-height:3.2em}
+.readout b{color:var(--ink)}
+.chartbox{position:relative;margin-top:4px}
+svg{display:block;width:100%;height:auto}
+#chart,#chart *{outline:none;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+#chart .fade{transition:opacity .26s ease}
+#chart .band{transition:opacity .12s linear}
+.gridline{stroke:var(--rule);stroke-width:1}
+.zeroline{stroke:var(--axis);stroke-width:1.4}
+.seam{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 4}
+.tick{font-size:13px;fill:var(--ink-3)}
+.cap{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;fill:var(--ink-3)}
+.annv{font-size:15px;font-weight:700;fill:var(--blue)}
+.annd{font-size:13.5px;fill:var(--ink-2)}
+.leader{stroke:var(--blue);stroke-width:1.2;opacity:.55}
+.endv{font-size:19px;font-weight:700;fill:var(--blue)}
+.endy{font-size:12.5px;fill:var(--ink-3)}
+.band-l{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+.band-l.out{fill:var(--ink-2)}
+.bl-line{fill:none;stroke:var(--ink-3);stroke-width:1;opacity:.75}
+@media(max-width:560px){.tick{font-size:11px}.annv{font-size:13px}.annd{font-size:12px}.band-l{font-size:10px}}
+.legend{display:flex;flex-wrap:wrap;gap:9px 26px;margin:14px 0 0;font-size:13.5px;color:var(--ink-2)}
+.legend>span{display:inline-flex;align-items:center;gap:9px}
+.legend i{display:block;width:30px;height:0;border-top-style:solid;border-color:var(--blue)}
+.legend i.v{width:0;height:14px;border-top:0;border-left:1px dotted var(--ink-3)}
+.keys{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;padding-top:12px;border-top:1px solid var(--rule)}
+.keys button{appearance:none;background:none;border:0;padding:2px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+  font-family:inherit;font-size:13px;color:var(--ink-2)}
+.keys button:hover,.keys button[aria-pressed=true]{color:var(--ink)}
+.keys button[aria-pressed=true]{font-weight:600}
+.keys .sw{width:14px;height:9px;display:inline-block}
+.keys .more{font-size:13px;color:var(--ink-3);padding:2px 0}
+.src{font-size:13.5px;color:var(--ink-3);margin:14px 0 0;max-width:96ch;line-height:1.5}
+
+/* ── readout panel: white, 1px ink border, offset shadow, never under the cursor ── */
+.tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .08s;z-index:30;background:var(--bg);
+  border:1px solid var(--ink);padding:10px 13px 11px;min-width:224px;box-shadow:3px 3px 0 rgba(15,17,19,.07)}
+.tip.on{opacity:1}
+.tip .y{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+.tip .v{font-size:26px;font-weight:700;letter-spacing:-.03em;line-height:1.15;margin:1px 0 7px}
+.tip table{border-collapse:collapse;width:100%;font-size:12.5px}
+.tip td{padding:2px 0;color:var(--ink-2);white-space:nowrap}
+.tip td+td{text-align:right;color:var(--ink);font-weight:500;padding-left:14px}
+.tip tr.hot td{color:var(--ink);font-weight:700}
+.tip i{display:inline-block;width:10px;height:3px;margin-right:7px;vertical-align:3px}
+.tip .m{margin-top:8px;padding-top:7px;border-top:1px solid var(--rule);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ── ledger table ── */
+.ledger{margin:52px 0 0}
+table.data{border-collapse:collapse;font-size:13.5px;width:100%}
+table.data th{text-align:right;font-weight:600;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-label);
+  padding:0 0 8px 22px;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+table.data th:first-child,table.data td:first-child{text-align:left;padding-left:0;width:2.6em}
+table.data th:nth-child(2),table.data td:nth-child(2){text-align:left;padding-left:0}
+table.data td{text-align:right;padding:5px 0 5px 22px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.data td:first-child{color:var(--ink-3)}
+table.data tr:hover td{background:var(--bg-sunk)}
+table.data tr.rest td{color:var(--ink-2)}
+table.data .sw{display:inline-block;width:12px;height:8px;margin-right:9px}
+.ledger .line{font-size:15px;color:var(--ink-2);margin:0 0 12px}
+.ledger .line b{color:var(--ink)}
+
+/* ── disclosure panels: native <details>, all identical ── */
+details.panel{margin:40px 0 0;border:1px solid var(--rule-2);background:var(--bg-sunk)}
+details.panel+details.panel{margin-top:14px}
+details.panel>summary{list-style:none;cursor:pointer;padding:17px 22px;display:flex;align-items:center;gap:13px;font-weight:600;font-size:16px;user-select:none}
+details.panel>summary::-webkit-details-marker{display:none}
+details.panel>summary .hint{font-weight:400;color:var(--ink-3);font-size:14.5px}
+.chev{width:11px;height:11px;border-right:2px solid var(--ink-2);border-bottom:2px solid var(--ink-2);transform:rotate(-45deg);transition:transform .16s;margin-top:-3px;flex:0 0 auto}
+details.panel[open] .chev{transform:rotate(45deg);margin-top:-6px}
+.panel-body{padding:2px 22px 24px;border-top:1px solid var(--rule);max-width:78ch}
+.panel-body p,.panel-body li{font-size:15px;color:var(--ink-2)}
+.panel-body ol{margin:18px 0 0;padding-left:20px}
+.panel-body li{margin-bottom:12px}
+.panel-body b{color:var(--ink)}
+.panel-body h3{font-size:19px;font-weight:600;letter-spacing:-.01em;margin:24px 0 6px}
+.eq{margin:14px 0 6px;padding:13px 0 13px 18px;border-left:2px solid var(--blue);font-size:19px;overflow-x:auto}
+math{font-family:var(--sans);font-size:1em}
+.eqnote{font-size:14px;color:var(--ink-3);margin:0 0 14px;padding-left:18px;max-width:62ch}
+.srcblock{margin-top:22px;padding-top:16px;border-top:1px solid var(--rule);font-size:13.5px;line-height:1.7;color:var(--ink-2)}
+footer{margin:70px 0 0;padding-top:18px;border-top:2px solid var(--ink);font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
+@media(max-width:760px){.wrap{padding:28px 16px 80px}.modeswitch button{padding:12px 18px}.tip{min-width:190px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow" id="eyebrow"></p>
+  <h1>S&amp;P 500 composition since 1926</h1>
+  <p class="stand" id="stand"></p>
+  <div class="strip" id="strip"></div>
+  <nav class="modeswitch" id="modeSwitch" aria-label="Group the index by">
+    <button type="button" data-val="companies" aria-pressed="false">By company</button>
+    <button type="button" data-val="sectors" aria-pressed="false">By sector</button>
+    <span class="mode-indicator" id="modeIndicator"></span>
+  </nav>
+</header>
+
+<section class="figure">
+  <div class="togglerow">
+    <div class="tg"><span>Scale</span><div id="tg-axis">
+      <button type="button" class="metric" data-key="axis" data-val="log" aria-pressed="true">Log</button>
+      <button type="button" class="metric" data-key="axis" data-val="linear" aria-pressed="false">Linear</button>
+      <button type="button" class="metric" data-key="axis" data-val="share" aria-pressed="false">100%</button></div></div>
+    <div class="tg"><span>From</span><div id="tg-from">
+      <button type="button" class="metric" data-key="from" data-val="1926" aria-pressed="true">1926</button>
+      <button type="button" class="metric" data-key="from" data-val="1957" aria-pressed="false">1957</button>
+      <button type="button" class="metric" data-key="from" data-val="1990" aria-pressed="false">1990</button>
+      <button type="button" class="metric" data-key="from" data-val="2010" aria-pressed="false">2010</button></div></div>
+  </div>
+  <p class="readout" id="readout"></p>
+  <div class="chartbox">
+    <svg id="chart" role="img" tabindex="0" aria-label=""></svg>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </div>
+  <div class="legend" id="legend"></div>
+  <div class="keys" id="keys" aria-label="Bands"></div>
+  <p class="src" id="src"></p>
+</section>
+
+<section class="ledger" aria-live="polite">
+  <h2 id="ledger-h"></h2>
+  <p class="line" id="ledger-line"></p>
+  <table class="data" id="ledger"></table>
+</section>
+
+<details class="panel" id="method">
+  <summary><span class="chev"></span>Method <span class="hint" id="method-hint"></span></summary>
+  <div class="panel-body" id="method-body"></div>
+</details>
+<details class="panel" id="wrong">
+  <summary><span class="chev"></span>Where this can be wrong <span class="hint" id="wrong-hint"></span></summary>
+  <div class="panel-body" id="wrong-body"></div>
+</details>
+
+<footer id="foot"></footer>
+</div>
+<script src="market.js?v=202610062155"></script>
+<script src="app.js?v=202610062155"></script>
+</body>
+</html>
